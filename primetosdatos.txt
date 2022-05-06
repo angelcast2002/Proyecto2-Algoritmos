@@ -1,0 +1,73 @@
+CREATE (MayorEdad:Edad)
+CREATE (MenorEdad:Edad)
+CREATE (Offline18)
+CREATE (Offline)
+CREATE (Multi18:Multijugador)
+CREATE (Multi:Multijugador)
+CREATE (Warzone:Videojuego{Nombre:'Warzone',Gen1:'Accion',Gen2:'Estrategia'})
+CREATE (Valorant:Videojuego{Nombre:'Valorant', Gen1:'Estrategia',Gen2:'Accion',Gen3:'Deporte'})
+CREATE (Destini2:Videojuego{Nombre:'Destiny 2', Gen1:'Accion',Gen2:'Historia',Gen3:'Aventura'})
+CREATE (RocketLeague:Videojuego{Nombre:'Rocket League', Gen1:'Deporte',Gen2:'Accion',Gen3:'Estrategia'})
+CREATE (LOL:Videojuego{Nombre:'League of Legends', Gen1:'Esports',Gen2:'Estrategia',Gen3:'Accion'})
+CREATE (Minecraft:Videojuego{Nombre:'Minecraft', Gen1:'Simulador',Gen2:'Aventura',Gen3:'Esports'})
+CREATE (Overwatch:Videojuego{Nombre:'Overwatch', Gen1:'Peleas',Gen2:'Estrategia',Gen3:'Esports'})
+CREATE (GI:Videojuego{Nombre:'Genshin Impact', Gen1:'Rol',Gen2:'Aventura',Gen3:'Historia'})
+CREATE (Counter_Strike:Videojuego{Nombre:'Counter_Strike',Gen1:'Accion',Gen2:'Estrategia',Gen3:'Esports'})
+CREATE (Borderlands3:Videojuego{Nombre:'Borderlands3',Gen1:'Historia',Gen2:'Aventura',Gen3:'Accion'})
+CREATE (MonsterHunter:Videojuego{Nombre:'Monster Hunter',Gen1:'Terror',Gen2:'Historia',Gen3:'Aventura'})
+CREATE (Warzon:Videojuego{Nombre:'Warzon',Gen1:'Estrategia',Gen2:'Aventura',Gen3:'Accion'})
+CREATE (Portal2:Videojuego{Nombre:'Portal2',Gen1:'Aventura',Gen2:'Estrategia',Gen3:'Historia'})
+CREATE (CastleCrashers:Videojuego{Nombre:'Castle Crashers',Gen1:'Simulador',Gen2:'Aventura',Gen3:'Historia'})
+CREATE (BattlefieldV:Videojuego{Nombre:'Battlefield V',Gen1:'Accion',Gen2:'Historia',Gen3:'Aventura'})
+CREATE (Fortnite:Videojuego{Nombre:'Fortnite',Gen1:'Estrategia',Gen2:'Esports',Gen3:'Accion'})
+CREATE (Apex:Videojuego{Nombre:'Apex',Gen1:'Estrategia',Gen2:'Esports',Gen3:'Accion'})
+
+CREATE
+(Multi18)-[:Pertenece] ->(MayorEdad)
+CREATE
+(Multi)-[:Pertenece] ->(MenorEdad)
+CREATE
+(Offline18)-[:Pertenece] ->(MayorEdad)
+CREATE
+(Offline)-[:Pertenece]->(MenorEdad)
+     
+
+CREATE
+(Warzone)-[:Pertenece]->(Multi18)
+CREATE
+(Valorant)-[:Pertenece]->(Multi)
+CREATE
+(Destini2)-[:Pertenece]->(Multi)
+CREATE
+(RocketLeague)-[:Pertenece]->(Multi)
+CREATE
+(LOL)-[:Pertenece]->(Multi)
+CREATE
+(Minecraft)-[:Pertenece]->(Multi)
+CREATE
+(Overwatch)-[:Pertenece]->(Multi)
+CREATE
+(GI)-[:Pertenece]->(Multi)
+CREATE
+(Borderlands3)-[:Pertenece]->(Offline18)
+CREATE
+(CounterStrike)-[:Pertenece]->(Multi18)
+CREATE
+(MonsterHunter)-[:Pertenece]->(Offline)
+CREATE
+(Warzon)-[:Pertenece]->(Multi18)
+CREATE
+(Portal2)-[:Pertenece]->(Offline)
+CREATE
+(CastleCrashers)-[:Pertenece]->(Multi)
+CREATE
+(BattlefieldV)-[:Pertenece]->(Multi18)
+CREATE
+(Fortnite)-[:Pertenece]->(Multi)
+CREATE
+(Apex)-[:Pertenece]->(Multi)
+
+
+
+
+
