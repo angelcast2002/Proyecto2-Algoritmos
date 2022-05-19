@@ -1,0 +1,11 @@
+//Mostrar los nombres de todos los juegos
+MATCH (n:Videojuego) RETURN n.Nombre
+
+
+//Mostrar los juegos con los parámetros ingresados
+//Cambiar UnJugador por la varible de offline u online
+//Cambiar "Menor" por la variable Mayor o Menor dependiendo de la edad ingresada por el usuario
+//Cambiar "Aventura" e "Historia" por las variables que contengan las preferencias del usuario
+MATCH  (n:Videojuego) - [:Pertenece] -> (m:UnJugador) - [:Pertenece] -> (c:Edad {Nombre:"Menor"}) 
+WHERE n.Gen1 ="Aventura" AND  n.Gen2 ="Historia" OR n.Gen2 ="Aventura" AND  n.Gen1 ="Historia" OR n.Gen2 ="Aventura" AND  n.Gen3 ="Historia" OR n.Gen3 ="Aventura" AND  n.Gen2 ="Historia" OR n.Gen1 ="Aventura" AND  n.Gen3 ="Historia" OR n.Gen3 ="Aventura" AND  n.Gen1 ="Historia"
+RETURN n.Nombre
