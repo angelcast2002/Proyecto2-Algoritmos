@@ -44,40 +44,77 @@
                                 <div class="page-title">
                                     <h2>Recomendaciones De<span class="primary"> Videojuegos</span></h2>
                                     <p>Llena los campos con lo que se solicita para encontrar tus próxima lista de videojuegos.</p>
-                                </div>           
+                                </div>
+                            <form id="contact-form" class="row contact-form no-gutter" action="#" method="post">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
-                                    <span class= "input-icon" id="categoria">
-                                    <input type="email" class="form-control" name="subject" placeholder="Ingresa la categoria">
+                                    <input list="categorias1" class="form-control" placeholder="Genero 1">
+                                    <datalist id="categorias1">
+                                        <option value="Historia">
+                                        <option value="Accion">
+                                        <option value="Deportes">
+                                        <option value="Plataformas">
+                                        <option value="Peleas">
+                                        <option value="Rol">
+                                        <option value="Aventura">
+                                        <option value="Terror">
+                                        <option value="Estrategia">
+                                        <option value="Simulador">
+                                        <option value="Carreras">
+                                        <option value="Esports">
+                                    </datalist>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="genero"></span>
-                                    <input type="email" class="form-control" name="email" placeholder="Ingrese el genero">
+                                    <input list="categorias2" class="form-control" placeholder="Genero 2">
+                                    <datalist id="categorias2">
+                                        <option value="Historia">
+                                        <option value="Accion">
+                                        <option value="Deportes">
+                                        <option value="Plataformas">
+                                        <option value="Peleas">
+                                        <option value="Rol">
+                                        <option value="Aventura">
+                                        <option value="Terror">
+                                        <option value="Estrategia">
+                                        <option value="Simulador">
+                                        <option value="Carreras">
+                                        <option value="Esports">
+                                    </datalist>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="modo"></span>
-                                    <input type="email" class="form-control" name="email" placeholder="Un jugador o Multijugador">
+                                    <input list="mode" class="form-control" placeholder="Online/Offline">
+                                    <datalist id="mode">
+                                        <option value="UnJugador">
+                                        <option value="Multijugador">
+                                    </datalist>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="modo"></span>
-                                    <input type="email" class="form-control" name="email" placeholder="Edad">
+                                    <input list="edad" class="form-control" placeholder="Edad">
+                                    <datalist id="edad">
+                                        <option value="Mayor">
+                                        <option value="Menor">
+                                    </datalist>
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class="btn-border">
-                                        <button type="submit" class="btn btn-primary btn-custom-border text-uppercase">Send Message now</button>
+                                        <button type="submit" class="btn btn-primary btn-custom-border text-uppercase">Submit</button>
                                     </span>
                                 </div>
-                                <div class="msg-success">Your Message was sent successfully</div>
-                                <div class="msg-failed">Something went wrong, please try again later</div>
+                                <div class="msg-success">Datos ingresados con exito</div>
+                                <div class="msg-failed">Ocurrio un error</div>
                             </div> <!-- ./col- -->
+                            </form>
                             </div> <!-- /.col-xs-12 -->
                         </div> <!-- /.row -->
                     </div> <!-- /.container -->
