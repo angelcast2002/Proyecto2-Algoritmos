@@ -316,6 +316,10 @@ textarea, label {
   background: #1e2530;
 }
 
+.modal-body {
+  margin-top: 10px;
+}
+
 .section-title {
   margin-bottom: 20px;
 }
