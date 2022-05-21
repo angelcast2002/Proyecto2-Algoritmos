@@ -45,10 +45,9 @@
                                     <h2>Recomendaciones De<span class="primary"> Videojuegos</span></h2>
                                     <p>Llena los campos con lo que se solicita para encontrar tus próxima lista de videojuegos.</p>
                                 </div>
-                            <form id="contact-form" class="row contact-form no-gutter" action="#" method="post">
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
-                                    <input list="categorias1" class="form-control" placeholder="Genero 1">
+                                    <input list="categorias1" id="cat1-input" class="form-control" placeholder="Genero 1">
                                     <datalist id="categorias1">
                                         <option value="Historia"></option>
                                         <option value="Accion"></option>
@@ -68,7 +67,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="genero"></span>
-                                    <input list="categorias2" class="form-control" placeholder="Genero 2">
+                                    <input list="categorias2" id="cat2-input" class="form-control" placeholder="Genero 2">
                                     <datalist id="categorias2">
                                         <option value="Historia"></option>
                                         <option value="Accion"></option>
@@ -88,7 +87,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="modo"></span>
-                                    <input list="mode" class="form-control" placeholder="Online/Offline">
+                                    <input list="mode" id="list-mode" class="form-control" placeholder="Online/Offline">
                                     <datalist id="mode">
                                         <option value="UnJugador"></option>
                                         <option value="Multijugador"></option>
@@ -98,7 +97,7 @@
                             <div class="col-xs-12 col-sm-6">
                                 <div class="input-field">
                                     <span class= "input-icon" id="modo"></span>
-                                    <input list="edad" class="form-control" placeholder="Edad">
+                                    <input list="edad" id="list-edad" class="form-control" placeholder="Edad">
                                     <datalist id="edad">
                                         <option value="Mayor"></option>
                                         <option value="Menor"></option>
@@ -106,20 +105,53 @@
                                 </div>
                             </div> <!-- ./col- -->
                             <div class="col-xs-12 col-sm-6">
-                                <div class="input-field">
+                                <div id="buscar">
                                     <span class="btn-border">
-                                        <button id="buscar" type="submit" class="btn btn-primary btn-custom-border text-uppercase" data-toggle="modal" data-target="#listaRecomendaciones">Submit</button>
-                                    </span>
-                                    <span class="btn-border">
-                                        <a href="lista.php" class="btn btn-primary btn-custom-border text-uppercase" data-toggle="modal" data-target="#listaVideojuegos">Ver Lista Videojuegos</a>
+                                    <button id="buscar2" class="btn btn-primary" data-toggle="modal" data-target="#modalRecomendaciones">Submit</button>
                                     </span>
                                 </div>
-                                <div class="msg-success">Datos ingresados con exito</div>
-                                <div class="msg-failed">Ocurrio un error</div>
+                            <div>
+                                <span class="btn-border">
+                                    <button id="buscar3" class="btn btn-primary" data-toggle="modal" data-target="#modalVideojuegos">Ver Lista de Videojuegos</button>
+                                </div>
                             </div> <!-- ./col- -->
-                            </form>
                             </div> <!-- /.col-xs-12 -->
                         </div> <!-- /.row -->
+
+                        <!-- Modal Recomendaciones-->
+                        <div class="modal fade" id="modalRecomendaciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2>RECOMEN<span class="primary">DACIONES</span></h2>
+                                  </button>
+                                </div>
+                                <div id="listaRecomendaciones">
+                                    </div>
+                                <div class="modal-footer">
+                                      <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Modal Lista Videojuegos -->
+                      <div class="modal fade" id="modalVideojuegos" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                              <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h2>LISTA DE <span class="primary">VIDEOJUEGOS</span></h2>
+                              </button>
+                            </div>
+                              <div id="listaVideojuegos">
+                                  </div>
+                              <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     </div> <!-- /.container -->
                     <nav class="page-nav clear">
                         <div class="container">
@@ -132,42 +164,6 @@
                         <!-- /.page-nav -->
                     </nav>
                     <!-- /.container -->
-
-                    <!-- Modal Submit -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog" role="document">
-                              <div class="modal-content">
-                                <div class="modal-title">
-                                    <h2><span class="secondary">Recomendaciones</span></h2>
-                              </button>
-                            </div>
-                            <div class="modal-body" id="listaRecomendaciones">
-                                <!-- AQUI ESTA EL DIV PA LA LISTA -->
-                                  ...
-                                </div>
-                            <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                            </div>
-                      </div>
-                    </div>
-                </div>
-
-                    <!-- Modal Lista Videojuegos -->
-                    <div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                            <div class="modal-title" id="listaVideojuegos" >
-                                <h2><span class="secondary">Lista Videojuegos</span></h2>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- AQUI ESTA EL DIV PA LA LISTA -->
-                              ...
-                            </div>
-                        <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
-                        </div>
-                    </div>
 
                 </div>
 
