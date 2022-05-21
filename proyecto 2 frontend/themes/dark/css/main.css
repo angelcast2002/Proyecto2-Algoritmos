@@ -303,13 +303,17 @@ textarea, label {
   padding-left: 100px;
 }
 
-.modal-title h2{
+.modal-header h2{
+  font-family: "Open Sans", sans-serif;
   color: #1e2530;
-  font-size: 30px;
+  font-size: 700;
   font-weight: 700;
   margin-top: 20px;
-  margin-left: 50px;
   margin-bottom: 10px;
+}
+
+.modal-content {
+  background: #1e2530;
 }
 
 .section-title {
@@ -1102,22 +1106,22 @@ textarea, label {
   border-top-color: #626cfa;
 }
 
-.contact-form .input-field {
+.input-field {
   margin-bottom: 10px;
   margin: 5px;
 }
-.contact-form .input-field.name {
+.input-field.name {
   margin-right: 5px;
 }
-.contact-form .input-field.email {
+.input-field.email {
   margin-left: 5px;
 }
-.contact-form .input-field label.error {
+.input-field label.error {
   color: #ff0000;
   font-size: 13px;
   margin: 0;
 }
-.contact-form .input-icon {
+.input-icon {
   background-color: #1e2530;
   border-radius: 3px 0 0 3px;
   border-right: 1px solid rgba(255, 255, 255, 0.2);
@@ -1130,26 +1134,25 @@ textarea, label {
   position: absolute;
   top: 0;
 }
-.contact-form .form-control {
+.form-control {
   background-color: #1e2530;
   color: #bcbcbc;
   border: 0 none;
   border-radius: 3px;
   height: 48px;
-  padding-left: 70px;
   width: 100%;
   font-family: "Open Sans", sans-serif;
 }
-.contact-form .form-control:focus {
+.form-control:focus {
   box-shadow: none;
   color: #fff;
 }
-.contact-form textarea.form-control {
+textarea.form-control {
   border-radius: 3px;
   height: 120px;
   padding: 15px 10px 15px 70px;
 }
-.contact-form .message .input-icon {
+.message .input-icon {
   position: absolute;
   left: 0;
   top: 0;
@@ -1541,7 +1544,7 @@ textarea, label {
     padding: 20px;
   }
 
-  .contact-form .input-field.name {
+  .input-field.name {
     margin-right: 0;
   }
 }
