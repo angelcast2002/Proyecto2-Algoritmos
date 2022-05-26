@@ -9,3 +9,33 @@ MATCH (n:Videojuego) RETURN n.Nombre
 MATCH  (n:Videojuego) - [:Pertenece] -> (m:UnJugador) - [:Pertenece] -> (c:Edad {Nombre:"Menor"}) 
 WHERE n.Gen1 ="Aventura" AND  n.Gen2 ="Historia" OR n.Gen2 ="Aventura" AND  n.Gen1 ="Historia" OR n.Gen2 ="Aventura" AND  n.Gen3 ="Historia" OR n.Gen3 ="Aventura" AND  n.Gen2 ="Historia" OR n.Gen1 ="Aventura" AND  n.Gen3 ="Historia" OR n.Gen3 ="Aventura" AND  n.Gen1 ="Historia"
 RETURN n.Nombre
+
+
+//Crear Persona
+CREATE (Angel:Persona {Nombre:"AngelCast", Correo:"castellanos@gmail"})
+
+
+
+//Crear Recomendaciones
+MATCH (n:Persona {Nombre:"Sebas"})
+CREATE (Prueba2:Videojuego{Nombre:"Prueba",Gen:"Accion"})
+CREATE (Prueba2) - [:Pertenece] -> (n) 
+
+
+//Buscar Persona
+MATCH (n:Persona{Nombre:"AngelCast"})
+RETURN n
+
+
+//Buscar Juegos
+MATCH (n:Videojuego{Nombre:"Battle"}) - [:Pertenece] -> (Sebas:Persona)
+RETURN n
+
+//Buscar juegos por usuario
+MATCH (n:Videojuego) - [:Pertenece] -> (Sebas:Persona)
+RETURN n
+
+
+//Buscar Persona
+MATCH (n:Persona)
+RETURN n.Nombre
