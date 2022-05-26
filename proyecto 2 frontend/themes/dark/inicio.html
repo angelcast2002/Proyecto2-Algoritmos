@@ -67,16 +67,63 @@
                                         <input type="email" id="correo" class="form-control" name="email" placeholder="Correo">
                                     </div>
                                 </div> <!-- ./col- -->
-                                <div class="col-xs-12 col-sm-12">
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-field">
+                                        <input type="text" id="juego-inicio" class="form-control"  placeholder="Juego">
+                                    </div>
+                                </div> <!-- ./col- -->
+                                <div class="col-xs-12 col-sm-6">
+                                    <div class="input-field">
+                                        <span class= "input-icon" id="genero-inicio"></span>
+                                        <input list="categorias2" id="cat2-input" class="form-control" placeholder="Genero">
+                                        <datalist id="categorias2">
+                                            <option value="Historia"></option>
+                                            <option value="Accion"></option>
+                                            <option value="Deportes"></option>
+                                            <option value="Plataformas"></option>
+                                            <option value="Peleas"></option>
+                                            <option value="Rol"></option>
+                                            <option value="Aventura"></option>
+                                            <option value="Terror"></option>
+                                            <option value="Estrategia"></option>
+                                            <option value="Simulador"></option>
+                                            <option value="Carreras"></option>
+                                            <option value="Esports"></option>
+                                        </datalist>
+                                    </div>
+                                </div> <!-- ./col- -->
+                                <div class="col-xs-12">
                                     <div class="input-field">
                                         <span class="btn-border">
-                                            <button id="crear-usuario" class="btn btn-primary btn-custom-border text-uppercase">Empezar</button>
+                                            <button id="crear-usuario" class="btn btn-primary btn-md text-uppercase">Iniciar</button>
+                                        </span>
+                                        <span class="btn-border">
+                                            <button id="mostrar-usuarios" class="btn btn-primary btn-md text-uppercase" data-toggle="modal" data-target="#modalUsuarios">Mostrar usuarios</button>
                                         </span>
                                     </div>
                                     <div class="msg-success">Datos ingresados con exito</div>
                                     <div class="msg-failed">Algo ha salido mal, intenta de nuevo más tarde</div>
                                 </div> <!-- ./col- -->
                         </div> <!-- /.col- -->
+
+
+                        <!-- Modal Mostrar Usuarios-->
+                        <div class="modal fade" id="modalUsuarios" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                <div class="modal-header">
+                                    <h2>USUA<span class="primary">RIOS</span></h2>
+                              </button>
+                            </div>
+                            <div id="listaRecomendaciones" class="modal-body">
+                                </div>
+                            <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     </div> <!-- /.container -->
 
                     <nav class="page-nav clear">
